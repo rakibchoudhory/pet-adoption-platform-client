@@ -35,7 +35,7 @@ const Navbar = () => {
     },
     {
       name: "My Requests",
-      href: "/my-requests",
+      href: "/dashboard/my-requests",
     },
     {
       name: "Add Pet",

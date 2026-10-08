@@ -1,5 +1,4 @@
-
-const AddPetPage = () => {
+const MyListingsPage = () => {
   return (
     <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
       <p className="text-sm font-semibold uppercase tracking-wider text-green-600">
@@ -7,15 +6,14 @@ const AddPetPage = () => {
       </p>
 
       <h1 className="mt-2 text-3xl font-bold text-gray-900">
-        Add Pet
+        My Listings
       </h1>
 
       <p className="mt-3 text-gray-500">
-        Add a new pet to the adoption platform.
+        Your pet listings will appear here.
       </p>
     </div>
   );
 };
 
-export default AddPetPage;
-
+export default MyListingsPage;

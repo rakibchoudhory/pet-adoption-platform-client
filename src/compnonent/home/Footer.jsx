@@ -1,16 +1,7 @@
 import Link from "next/link";
-import {
-  PawPrint,
-  Mail,
-  Phone,
-  MapPin,
-} from "lucide-react";
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaTwitter,
-} from "react-icons/fa";
-import CurrentYear from "./CurrentYear";
+import { PawPrint, Mail, Phone, MapPin } from "lucide-react";
+import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
+import CurrentYear from "../CurrentYear";
 
 const Footer = () => {
   return (
@@ -18,7 +9,6 @@ const Footer = () => {
       {/* Main Footer */}
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4">
-
           {/* Brand */}
           <div>
             <Link
@@ -35,8 +25,8 @@ const Footer = () => {
             </Link>
 
             <p className="max-w-sm text-sm leading-6 text-gray-400">
-              Giving loving pets a second chance to find a safe, caring,
-              and forever home. Together, we can make a difference.
+              Giving loving pets a second chance to find a safe, caring, and
+              forever home. Together, we can make a difference.
             </p>
 
             {/* Social Icons */}
@@ -75,10 +65,7 @@ const Footer = () => {
 
             <ul className="space-y-3 text-sm">
               <li>
-                <Link
-                  href="/"
-                  className="transition hover:text-orange-500"
-                >
+                <Link href="/" className="transition hover:text-orange-500">
                   Home
                 </Link>
               </li>
@@ -94,7 +81,7 @@ const Footer = () => {
 
               <li>
                 <Link
-                  href="/my-requests"
+                  href="/dashboard/my-requests"
                   className="transition hover:text-orange-500"
                 >
                   My Requests
@@ -123,52 +110,35 @@ const Footer = () => {
 
           {/* Pet Care */}
           <div>
-            <h3 className="mb-5 text-lg font-semibold text-white">
-              Pet Care
-            </h3>
+            <h3 className="mb-5 text-lg font-semibold text-white">Pet Care</h3>
 
             <ul className="space-y-3 text-sm">
               <li>
-                <Link
-                  href="/"
-                  className="transition hover:text-orange-500"
-                >
+                <Link href="/" className="transition hover:text-orange-500">
                   Pet Care Tips
                 </Link>
               </li>
 
               <li>
-                <Link
-                  href="/"
-                  className="transition hover:text-orange-500"
-                >
+                <Link href="/" className="transition hover:text-orange-500">
                   Adoption Guide
                 </Link>
               </li>
 
               <li>
-                <Link
-                  href="/"
-                  className="transition hover:text-orange-500"
-                >
+                <Link href="/" className="transition hover:text-orange-500">
                   Pet Health
                 </Link>
               </li>
 
               <li>
-                <Link
-                  href="/"
-                  className="transition hover:text-orange-500"
-                >
+                <Link href="/" className="transition hover:text-orange-500">
                   Success Stories
                 </Link>
               </li>
 
               <li>
-                <Link
-                  href="/"
-                  className="transition hover:text-orange-500"
-                >
+                <Link href="/" className="transition hover:text-orange-500">
                   FAQs
                 </Link>
               </li>
@@ -185,9 +155,7 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-orange-500" />
 
-                <span>
-                  Dhaka, Bangladesh
-                </span>
+                <span>Dhaka, Bangladesh</span>
               </li>
 
               <li className="flex items-center gap-3">
@@ -224,17 +192,11 @@ const Footer = () => {
           </p>
 
           <div className="flex items-center gap-5">
-            <Link
-              href="/"
-              className="transition hover:text-orange-500"
-            >
+            <Link href="/" className="transition hover:text-orange-500">
               Privacy Policy
             </Link>
 
-            <Link
-              href="/"
-              className="transition hover:text-orange-500"
-            >
+            <Link href="/" className="transition hover:text-orange-500">
               Terms of Service
             </Link>
           </div>
