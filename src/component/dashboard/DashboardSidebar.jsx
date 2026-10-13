@@ -41,7 +41,8 @@ const DashboardSidebar = () => {
       <div className="sticky top-24 rounded-2xl border border-gray-200 bg-white p-4 shadow-xl">
 
         {/* Logo / Header */}
-        <div className="mb-5 flex items-center gap-3 border-b border-gray-100 pb-5">
+       <div className="mb-5 flex items-center gap-3 border-b border-gray-100 pb-5">
+          <Link className="flex gap-3" href={'/'}>
           <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-orange-50 text-orange-500">
             <PawPrint size={23} />
           </div>
@@ -55,6 +56,7 @@ const DashboardSidebar = () => {
               Dashboard
             </p>
           </div>
+          </Link>
         </div>
 
         {/* Navigation */}

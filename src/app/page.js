@@ -1,14 +1,14 @@
-import BannarSection from "@/compnonent/home/BannarSection";
-import HowAdoptionWorks from "@/compnonent/home/HowAdoptionWorks";
-import PetCareTips from "@/compnonent/home/PetCareTips";
-import PetHeroCTA from "@/compnonent/home/PetHeroCTA";
-import SuccessStories from "@/compnonent/home/SuccessStories";
-import WhyAdoptSection from "@/compnonent/home/WhyAdoptSection";
+import BannarSection from "@/component/home/BannarSection";
+import HowAdoptionWorks from "@/component/home/HowAdoptionWorks";
+import PetCareTips from "@/component/home/PetCareTips";
+import PetHeroCTA from "@/component/home/PetHeroCTA";
+import SuccessStories from "@/component/home/SuccessStories";
+import WhyAdoptSection from "@/component/home/WhyAdoptSection";
 
 export default function Home() {
   return (
     <div >
-     <BannarSection/>
+      <BannarSection />
       <WhyAdoptSection />
 
       <SuccessStories />

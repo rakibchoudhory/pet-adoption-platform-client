@@ -5,7 +5,7 @@ import { ArrowRight, Heart, PawPrint } from "lucide-react";
 
 const BannarSection = () => {
   return (
-    <section className="relative overflow-hidden bg-orange-50">
+    <section className=" relative overflow-hidden bg-orange-50">
       {/* Decorative Background */}
       <div className="absolute -left-20 -top-20 h-72 w-72 rounded-full bg-orange-200/40 blur-3xl" />
 
@@ -132,7 +132,7 @@ const BannarSection = () => {
       </div>
 
       {/* Bottom Shape */}
-      <div className="absolute bottom-0 left-0 h-8 w-full rounded-t-[50%] bg-white" />
+     
     </section>
   );
 };
