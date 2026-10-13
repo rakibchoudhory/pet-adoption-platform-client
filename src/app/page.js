@@ -1,4 +1,5 @@
 import BannarSection from "@/component/home/BannarSection";
+import FeaturedPetsPage from "@/component/home/FeaturedPets";
 import HowAdoptionWorks from "@/component/home/HowAdoptionWorks";
 import PetCareTips from "@/component/home/PetCareTips";
 import PetHeroCTA from "@/component/home/PetHeroCTA";
@@ -9,6 +10,7 @@ export default function Home() {
   return (
     <div >
       <BannarSection />
+      <FeaturedPetsPage/>
       <WhyAdoptSection />
 
       <SuccessStories />
