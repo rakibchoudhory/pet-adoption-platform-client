@@ -8,6 +8,7 @@ import {
   ClipboardList,
   PlusCircle,
   PawPrint,
+  Heart,
 } from "lucide-react";
 
 const dashboardLinks = [
@@ -30,6 +31,11 @@ const dashboardLinks = [
     name: "My Listings",
     href: "/dashboard/my-listings",
     icon: PawPrint,
+  },
+  {
+    name: "My Wishlist",
+    href: "/dashboard/wishlist",
+    icon: Heart,
   },
 ];
 

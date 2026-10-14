@@ -5,6 +5,7 @@ import {
   PlusCircle,
   PawPrint,
   ArrowRight,
+  Heart,
 } from "lucide-react";
 
 const dashboardCards = [
@@ -29,6 +30,13 @@ const dashboardCards = [
     href: "/dashboard/my-listings",
     icon: PawPrint,
   },
+  {
+    title: "My Wishlist",
+    description:
+      "Manage your pets, view adoption requests and update your listings.",
+    href: "/dashboard/wishlist",
+    icon: Heart,
+  },
 ];
 
 const DashboardPage = () => {
@@ -52,7 +60,7 @@ const DashboardPage = () => {
       </div>
 
       {/* Dashboard Cards */}
-      <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+      <div className="grid gap-5 md:grid-cols-2  sm:grid-cols-2">
         {dashboardCards.map((card) => {
           const Icon = card.icon;
 
