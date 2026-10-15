@@ -7,7 +7,7 @@ import { authClient } from "@/lib/auth-client";
 import { toast } from "sonner";
 
 export default function PetCard({ pet }) {
-  // console.log("pet");
+  console.log("pet" , pet);
   const [isWishlisted, setIsWishlisted] = useState(false);
   const [isWishlistLoading, setIsWishlistLoading] = useState(false);
   const {

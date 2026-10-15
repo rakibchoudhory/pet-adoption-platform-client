@@ -41,7 +41,7 @@ async function MyListingsContent() {
 
   try {
     const res = await fetch(
-      `${process.env.NEXT_PUBLIC_SERVER_URL}/pets/user/${session.user.id}`,
+      `${process.env.NEXT_PUBLIC_SERVER_URL}/pets/user/${session?.user?.id}`,
       { cache: "no-store" },
     );
 

@@ -95,7 +95,7 @@ const RegisterPage = () => {
         email,
         password,
         image: image || undefined,
-        callbackURL: "/dashboard",
+        callbackURL: "/",
       });
 
       if (error) {
@@ -121,7 +121,7 @@ const RegisterPage = () => {
 
       await authClient.signIn.social({
         provider: "google",
-        callbackURL: "/dashboard",
+        callbackURL: "/",
       });
     } catch (error) {
       console.error(error);

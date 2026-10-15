@@ -63,7 +63,6 @@ const DashboardPage = () => {
       <div className="grid gap-5 md:grid-cols-2  sm:grid-cols-2">
         {dashboardCards.map((card) => {
           const Icon = card.icon;
-
           return (
             <Link
               key={card.href}
