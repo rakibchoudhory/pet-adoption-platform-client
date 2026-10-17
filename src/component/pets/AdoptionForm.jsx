@@ -36,7 +36,7 @@ const AdoptionForm = ({
         adoption.userId = userId;
 
       const {data:tokenData} = await authClient.token();
-      console.log(tokenData.token ,'token');
+      // console.log(tokenData.token ,'token');
 
       const res = await fetch(
         `${process.env.NEXT_PUBLIC_SERVER_URL}/adoption-requests`,  
@@ -51,7 +51,7 @@ const AdoptionForm = ({
       );
 
       const data = await res.json();
-      console.log(data);
+      // console.log(data);
 
       if (!res.ok) {
         throw new Error(

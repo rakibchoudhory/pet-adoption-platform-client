@@ -90,7 +90,7 @@ export default function PetCard({ pet }) {
       }
       setIsWishlistLoading(true);
       if (isWishlisted) {
-        // Heart লাল আছে → DELETE
+        // Heart Red → DELETE
 
         const { data: tokenData } = await authClient.token();
 
@@ -111,7 +111,7 @@ export default function PetCard({ pet }) {
         setIsWishlisted(false);
         toast.success("Removed from wishlist");
       } else {
-        // Heart খালি → POST
+        // Heart empty → POST
              const {data:tokenData} = await authClient.token(); 
         const res = await fetch(`${apiUrl}/wishlist`, {
           method: "POST",

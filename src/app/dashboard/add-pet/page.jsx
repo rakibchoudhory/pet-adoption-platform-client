@@ -150,7 +150,7 @@ const AddPetPageContent = () => {
       setIsSubmitting(true);
       
       const {data:tokenData} = await authClient.token(); 
-      console.log(tokenData?.token ,'token');
+      // console.log(tokenData?.token ,'token');
       
       const response = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/pets`, {
         method: "POST",

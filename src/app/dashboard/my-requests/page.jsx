@@ -53,14 +53,14 @@ const MyRequestsContent = async () => {
       },
       { cache: "no-store" },
     );
-    console.log(res);
+    // console.log(res);
 
     if (!res.ok) {
       throw new Error("Failed to fetch requests");
     }
 
     RequestedPets = await res.json();
-    console.log(RequestedPets);
+    // console.log(RequestedPets);
 
     if (!Array.isArray(RequestedPets)) {
       RequestedPets = [];
