@@ -41,8 +41,16 @@ const MyRequestsContent = async () => {
     );
   }
   try {
+    const tokenData = await auth.api.getToken({
+        headers: await headers ()
+       }) ;
+
     const res = await fetch(
-      `${process.env.NEXT_PUBLIC_SERVER_URL}/adoption-requests/${userId}`,
+      `${process.env.NEXT_PUBLIC_SERVER_URL}/adoption-requests/${userId}`,{
+        headers:{
+          authorization: `Bearer ${tokenData?.token}`
+        }
+      },
       { cache: "no-store" },
     );
     console.log(res);

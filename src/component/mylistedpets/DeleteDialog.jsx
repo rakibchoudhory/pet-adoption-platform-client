@@ -5,6 +5,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { AlertDialog, Button } from "@heroui/react";
 import { Trash2, AlertTriangle, Loader2 } from "lucide-react";
+import { authClient } from "@/lib/auth-client";
 
 const DeleteDialog = ({ pet }) => {
   const router = useRouter();
@@ -18,9 +19,16 @@ const DeleteDialog = ({ pet }) => {
     setError("");
 
     try {
+
+      const {data:tokenData} = await authClient.token(); 
+
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_SERVER_URL}/pets/${pet._id}`,
-        { method: "DELETE" }
+        `${process.env.NEXT_PUBLIC_SERVER_URL}/pets/${pet._id}`,{
+          method: "DELETE" ,
+          headers: {
+            authorization: `Bearer ${tokenData.token}`
+          }
+        },
       );
 
       if (!res.ok) {

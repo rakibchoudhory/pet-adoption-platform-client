@@ -7,7 +7,7 @@ import { authClient } from "@/lib/auth-client";
 import { toast } from "sonner";
 
 export default function PetCard({ pet }) {
-  console.log("pet" , pet);
+  // console.log("pet" , pet);
   const [isWishlisted, setIsWishlisted] = useState(false);
   const [isWishlistLoading, setIsWishlistLoading] = useState(false);
   const {
@@ -42,9 +42,14 @@ export default function PetCard({ pet }) {
         if (!apiUrl) {
           throw new Error("Server URL is missing");
         }
+           const { data: tokenData } = await authClient.token();
 
         const res = await fetch(
-          `${apiUrl}/wishlist?userId=${encodeURIComponent(user.id)}`,
+          `${apiUrl}/wishlist?userId=${encodeURIComponent(user.id)}`,{
+            headers: {
+              authorization: `Bearer ${tokenData.token}`
+            }
+          },
         );
 
         if (!res.ok) {
@@ -87,10 +92,15 @@ export default function PetCard({ pet }) {
       if (isWishlisted) {
         // Heart লাল আছে → DELETE
 
+        const { data: tokenData } = await authClient.token();
+
         const res = await fetch(
           `${apiUrl}/wishlist/${encodeURIComponent(petId)}?userId=${encodeURIComponent(user.id)}`,
           {
             method: "DELETE",
+            headers: {
+              authorization: `Bearer ${tokenData?.token}`,
+            },
           },
         );
 
@@ -102,10 +112,12 @@ export default function PetCard({ pet }) {
         toast.success("Removed from wishlist");
       } else {
         // Heart খালি → POST
+             const {data:tokenData} = await authClient.token(); 
         const res = await fetch(`${apiUrl}/wishlist`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
+            authorization: `Bearer ${tokenData?.token}`,
           },
           body: JSON.stringify(wishlistData),
         });

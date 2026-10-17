@@ -12,6 +12,7 @@ import {
   Image as ImageIcon,
 } from "lucide-react";
 import { useRouter } from "next/navigation";
+import { authClient } from "@/lib/auth-client";
 
 const EditModal = ({ pet }) => {
   const router = useRouter();
@@ -46,12 +47,15 @@ const EditModal = ({ pet }) => {
         throw new Error("Server URL is missing.");
       }
 
+      const {data:tokenData} = await authClient.token(); 
+
       const res = await fetch(
         `${apiUrl}/pets/update-pet/${pet._id}`,
         {
           method: "PATCH",
           headers: {
             "Content-Type": "application/json",
+             authorization: `Bearer ${tokenData.token}`
           },
           body: JSON.stringify(updatedPet),
         }

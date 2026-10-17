@@ -27,8 +27,14 @@ export default function WishlistPage() {
       try {
         const apiUrl = process.env.NEXT_PUBLIC_SERVER_URL;
 
+         const {data:tokenData} = await authClient.token(); 
+
         const res = await fetch(
-          `${apiUrl}/wishlist?userId=${encodeURIComponent(user.id)}`
+          `${apiUrl}/wishlist?userId=${encodeURIComponent(user.id)}`,{
+            headers: {
+              authorization: `Bearer ${tokenData.token}`
+            }
+          }
         );
 
         if (!res.ok) {

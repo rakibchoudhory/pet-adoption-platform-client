@@ -4,6 +4,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
+import { authClient } from "@/lib/auth-client";
 
 const AdoptionForm = ({
   petId,
@@ -33,12 +34,17 @@ const AdoptionForm = ({
       const adoption = Object.fromEntries(formData.entries());
         adoption.petImage = petImage;
         adoption.userId = userId;
+
+      const {data:tokenData} = await authClient.token();
+      console.log(tokenData.token ,'token');
+
       const res = await fetch(
         `${process.env.NEXT_PUBLIC_SERVER_URL}/adoption-requests`,  
         {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
+            authorization: `Bearer ${tokenData?.token}`
           },
           body: JSON.stringify(adoption),
         }

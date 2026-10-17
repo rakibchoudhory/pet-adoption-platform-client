@@ -10,6 +10,7 @@ import {
   Loader2,
   CalendarX,
 } from "lucide-react";
+import { authClient } from "@/lib/auth-client";
 
 const CancelRequest = ({ petName, requestId, status }) => {
   const router = useRouter();
@@ -25,9 +26,15 @@ const CancelRequest = ({ petName, requestId, status }) => {
     setError("");
 
     try {
+
+      const {data:tokenData} = await authClient.token();
+
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_SERVER_URL}/adoption-requests/${requestId}`,
-        { method: "DELETE" }
+        `${process.env.NEXT_PUBLIC_SERVER_URL}/adoption-requests/${requestId}`,{
+    method: "DELETE",
+    headers: {
+      Authorization: `Bearer ${tokenData?.token}`,
+    }}
       );
 
       if (!res.ok) {

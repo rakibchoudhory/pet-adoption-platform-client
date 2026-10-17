@@ -8,8 +8,16 @@ export const instant = false;
 const PetDetailsPage = async ({ params }) => {
   const { id } = await params;
 
+   const tokenData = await auth.api.getToken({
+    headers: await headers ()
+   }) ;
+  //  console.log(token,'token');
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_SERVER_URL}/pets/${id}`,
+    `${process.env.NEXT_PUBLIC_SERVER_URL}/pets/${id}`,{
+      headers: {
+        authorization: `Bearer ${tokenData.token}`
+      }
+    },
     { cache: "no-store" }
   );
 
