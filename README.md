@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# PetHaven — Pet Adoption Platform
 
-## Getting Started
+## Project Name
+**PetHaven**
 
-First, run the development server:
+## Purpose
+PetHaven is a pet adoption platform designed to connect people with pets looking for a loving home. Users can explore available pets, view pet details, submit adoption requests, and manage their adoption activities. Pet owners can list pets and manage adoption requests through a user-friendly interface.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Live URL
+https://pet-adoption-platform-client-livid.vercel.app
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
+- **Browse Pets:** Explore available pets, including dogs, cats, birds, rabbits, and other animals.
+- **Pet Details:** View detailed information about pets, including images, age, breed, gender, health, and adoption fees.
+- **User Authentication:** Register and log in using email and password or Google authentication.
+- **Add a Pet:** Authenticated users can create pet listings with relevant information.
+- **My Listings:** Manage personal pet listings from the dashboard.
+- **Adoption Requests:** Submit adoption requests and manage submitted requests.
+- **Wishlist:** Save favorite pets for later.
+- **Responsive Design:** Access the platform on desktop, tablet, and mobile devices.
+- **Interactive UI:** Enjoy a clean interface with toast notifications and user-friendly navigation.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## NPM Packages Used
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Main Technologies
+- `next` — React framework for building the application.
+- `react` — UI library.
+- `react-dom` — React DOM rendering.
 
-## Learn More
+### Authentication
+- `better-auth` — Authentication and session management.
 
-To learn more about Next.js, take a look at the following resources:
+### UI and Styling
+- `tailwindcss` — Utility-first CSS framework.
+- `lucide-react` — Icons.
+- `sonner` — Toast notifications.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Development Tools
+- `eslint` — Code linting.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+> Note: The packages listed above should be checked against the project's `package.json` to ensure they match the installed dependencies.
